@@ -5,18 +5,16 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
-public class Symbol implements TextComponent{
+public class Punctuation implements TextComponent {
     private static final Logger logger = LogManager.getLogger();
-    private final TextComponentType type;
-    private char value;
+    private char sign;
 
-    public Symbol(char value, TextComponentType type){
-        this.value = value;
-        this.type = type;
+    public Punctuation(char sign){
+        this.sign = sign;
     }
 
-    public char getValue(){
-        return value;
+    public char getSign(){
+        return sign;
     }
 
     @Override
@@ -45,7 +43,6 @@ public class Symbol implements TextComponent{
 
     @Override
     public String toString() {
-        return String.valueOf(value);
+        return String.valueOf(sign);
     }
-
 }
