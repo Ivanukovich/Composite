@@ -17,6 +17,15 @@ public class Punctuation implements TextComponent {
         return sign;
     }
 
+    public TextComponentType getType() {
+        return TextComponentType.PUNCTUATION;
+    }
+
+    @Override
+    public TextComponent getCopy() {
+        return new Punctuation(this.sign);
+    }
+
     @Override
     public void add(TextComponent textComponent){
         logger.error("");

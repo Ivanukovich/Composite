@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface TextComponent {
 
+    TextComponent getCopy();
+
     void add(TextComponent textComponent);
 
     void remove(TextComponent textComponent);
@@ -11,6 +13,8 @@ public interface TextComponent {
     List<TextComponent> getChildren();
 
     int findSize();
+
+    TextComponentType getType();
 
     String toString();
 }

@@ -15,8 +15,17 @@ public class Symbol implements TextComponent{
         this.type = type;
     }
 
+    public TextComponentType getType() {
+        return type;
+    }
+
     public char getValue(){
         return value;
+    }
+
+    @Override
+    public TextComponent getCopy() {
+        return new Symbol(this.value, this.type);
     }
 
     @Override

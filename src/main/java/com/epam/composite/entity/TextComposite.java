@@ -13,6 +13,17 @@ public class TextComposite implements TextComponent {
     }
 
     @Override
+    public TextComponent getCopy() {
+        TextComponent copy = new TextComposite(type);
+        this.components.forEach(component -> copy.add(component.getCopy()));
+        return copy;
+    }
+
+    public TextComponentType getType() {
+        return type;
+    }
+
+    @Override
     public void add(TextComponent textComponent) {
         components.add(textComponent);
     }
